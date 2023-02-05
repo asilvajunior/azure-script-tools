@@ -1,0 +1,41 @@
+# Define variavel de rede
+ResourceGroup='lab02-RG'
+Location='eastus'
+vNetName='lab02-RG-vnet'
+AddressSpace='10.0.0.0/16'
+SubnetIPRange='10.0.0.0/24' 
+SubnetName='subnet0'
+nsgName='lab02-RG-nsg'
+
+# Cria resource group
+az group create --name $ResourceGroup --location $Location
+
+# Cria Virtual Network e Subnet
+az network vnet create -g $ResourceGroup -n $vNetName --address-prefix $AddressSpace --subnet-name $SubnetName --subnet-prefix $SubnetIPRange
+
+# Cria Network Security Group
+az network nsg create --resource-group $ResourceGroup --name $nsgName
+az network nsg rule create --resource-group $ResourceGroup --nsg-name $nsgName --name allow-vm-access --access Allow --protocol Tcp --direction Inbound --priority 100 --source-address-prefix "*" --source-port-range "*" --destination-address-prefix "*" --destination-port-range 22
+
+# Define variavel para maquina virtual
+vmName='lab02-vm0'
+pubName='Canonical'
+offerName='UbuntuServer'
+skuName='18.04-LTS'
+vmSize='Standard_DS2_v2'
+pipName=''$vmName'-pip' 
+nicName=''$vmName'-nic'
+osDiskName=''$vmName'-OsDisk'
+osDiskType='Standard_LRS'
+urn=''$pubName':'$offerName':'$skuName''
+
+# Cria credenciais de admin
+adminUsername='labuser'
+adminPassword='Jn77a.lb1234'
+
+# Cria ip publico e placa de rede
+az network public-ip create --name $pipName --resource-group $ResourceGroup
+az network nic create --resource-group $ResourceGroup --name $nicName --vnet-name $vNetName --subnet $SubnetName --public-ip-address $pipName --network-security-group $nsgName
+
+# Cira a maquina virtual
+az vm create --resource-group $ResourceGroup --name $vmName --image $urn:latest --os-disk-name $osDiskName --size $vmSize --storage-sku $osDiskType --admin-username $adminUsername --admin-password $adminPassword --nics $nicName

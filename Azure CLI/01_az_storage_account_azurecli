@@ -1,0 +1,12 @@
+# Define variavel de rede
+resourceGroup='lab01-RG'
+location='EastUS'
+saName='storagename01'
+sku='Standard_LRS'
+kind='StorageV2'
+
+# Cria resource group
+az group create --name $resourceGroup --location $location
+
+# Cria a Storage Account
+az storage account create --name $saName --resource-group $resourceGroup --location $location --sku $sku --kind $kind
