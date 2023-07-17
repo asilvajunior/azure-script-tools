@@ -200,9 +200,9 @@
                 "autoUpgradeMinorVersion":true,
                 "settings": {
                     "fileUris": [
-                      "https://raw.githubusercontent.com/asilvajunior/azure-script-tools/main/Azure%20VM%20IIS%20Template/03_az_install-iis.ps1"
+                      "https://raw.githubusercontent.com/asilvajunior/azure-script-tools/main/Azure%20VM%20IIS%20(APPGW)/03_az_install-iis.ps1"
                     ],
-                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File install-iis.ps1"
+                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File 03_az_install-iis.ps1"
                 }
             }
         },
@@ -221,9 +221,9 @@
                 "autoUpgradeMinorVersion":true,
                 "settings": {
                     "fileUris": [
-                      "https://raw.githubusercontent.com/asilvajunior/azure-script-tools/main/Azure%20VM%20IIS%20Template/03_az_install-iis.ps1"
+                      "https://raw.githubusercontent.com/asilvajunior/azure-script-tools/main/Azure%20VM%20IIS%20(APPGW)/03_az_install-iis.ps1"
                     ],
-                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File install-iis.ps1"
+                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File 03_az_install-iis.ps1"
                 }
             }
         }
