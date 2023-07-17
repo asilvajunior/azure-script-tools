@@ -4,16 +4,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vmName1": {
-            "value": "BackendVM1"
+            "value": "vm-backend-01"
         },
         "nicName1": {
-            "value": "BackendVM1-nic"
+            "value": "nic-backend-vm-01"
         },
         "vmName2": {
-            "value": "BackendVM2"
+            "value": "vm-backend-02"
         },
         "nicName2": {
-            "value": "BackendVM2-nic"
+            "value": "nic-backend-vm-02"
         },
         "vmSize": {
             "value": "Standard_DS1_v2"
