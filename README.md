@@ -22,7 +22,7 @@ This material is part of the audio visual content created on my YouTube channel:
 ### 2023
 
 - [Create Virtual Machine Windows and IIS on Azure with Powershell (APPGW)](Azure%20VM%20IIS%20(APPGW))
-- - [Create Virtual Machine Windows and IIS on Azure with Powershell (Load Balancer)](Azure%20VM%20IIS%20(Load%20Balancer)%20)
+- [Create Virtual Machine Windows and IIS on Azure with Powershell (Load Balancer)](Azure%20VM%20IIS%20(Load%20Balancer)%20)
 - [Create Storage Account on Azure with AZ CLI](Azure%20CLI/01_az_storage_account_azurecli)
 - [Create Storage Account on Azure with Powershell](Azure%20Powershell/01_az_storage_account_powershell)
 - [Create Virtual Machine Linux on Azure with AZ CLI](Azure%20CLI/02_az_vm_deploy_azurecli-Linux)
