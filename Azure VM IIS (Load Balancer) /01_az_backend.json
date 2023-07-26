@@ -102,9 +102,9 @@
                 "autoUpgradeMinorVersion":true,
                 "settings": {
                     "fileUris": [
-                       "https://raw.githubusercontent.com/tiagocostapt/az-700-labs/master/install-iis.ps1"
+                       "https://raw.githubusercontent.com/asilvajunior/azure-script-tools/main/Azure%20VM%20IIS%20(Load%20Balancer)%20/05_az_install-iis.ps1"
                     ],
-                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File install-iis.ps1"
+                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File 05_az_install-iis.ps1"
                 }
             }
         }
