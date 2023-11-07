@@ -28,6 +28,10 @@ This material is part of the audio visual content created on my YouTube channel:
 - [Create Virtual Machine Linux on Azure with AZ CLI](Azure%20CLI/02_az_vm_deploy_azurecli-Linux)
 - [Create Virtual Machine Windows on Azure with Powershell](Azure%20Powershell/02_az_vm_deploy_powershell-Windows)
 
+<p align='center'>
+  Do you like my open source projects? <a href='https://stars.github.com/nominate/'>Nominate me to Github Stars ⭐</a>
+</p>
+
 ## :memo: License
 
 This project is under [MIT License](./LICENSE).
