@@ -27,7 +27,7 @@ pipName=''$vmName'-pip'
 nicName=''$vmName'-nic'
 osDiskName=''$vmName'-OsDisk'
 osDiskType='Standard_LRS'
-urn=''$pubName':'$offerName':'$skuName''
+urn=''$pubName':'$offerName':'$skuName'':latest
 
 # Cria credenciais de admin
 adminUsername='labuser'
@@ -38,4 +38,4 @@ az network public-ip create --name $pipName --resource-group $ResourceGroup
 az network nic create --resource-group $ResourceGroup --name $nicName --vnet-name $vNetName --subnet $SubnetName --public-ip-address $pipName --network-security-group $nsgName
 
 # Cira a maquina virtual
-az vm create --resource-group $ResourceGroup --name $vmName --image $urn:latest --os-disk-name $osDiskName --size $vmSize --storage-sku $osDiskType --admin-username $adminUsername --admin-password $adminPassword --nics $nicName
+az vm create --resource-group $ResourceGroup --name $vmName --image $urn --os-disk-name $osDiskName --size $vmSize --storage-sku $osDiskType --admin-username $adminUsername --admin-password $adminPassword --nics $nicName
